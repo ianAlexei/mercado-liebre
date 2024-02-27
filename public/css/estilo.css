@@ -29,6 +29,10 @@ Por ejemplo, 1vw es igual al 1% del ancho de la ventana del navegador.
   /* margin: auto;  Esto centrará horizontalmente la barra de búsqueda */
    
 }
+.barra-de-busqueda input{   
+     height: 40px;
+    width: 90%;
+}
 .sub-header{
     text-align: center;
 
@@ -155,6 +159,9 @@ display: flex;
     display: none;
         
 }
+.sub-header2{
+    display: none;
+}
 
 }
 
@@ -196,6 +203,9 @@ display: flex;
     .todos-los-articulos{
         display: flex;
     }
+    .sub-header2{
+        display: none;
+}
 }
  
 
@@ -238,8 +248,12 @@ display: flex;
         justify-content: space-between;
     }
     .sub-header {
-        text-align: center;
+
+        display: none;
     }
+    .sub-header2{
+        display: flex;
+}
     .main-navbar ul {
         display: none;
     }
@@ -247,6 +261,11 @@ display: flex;
         flex-direction: column; /* Cambia la dirección de flexión a columna */
         align-items: center; /* Centra los elementos en el eje horizontal */
     }
+
+.barra-de-busqueda i{
+    display: none;
+}
+
 }
 
 
