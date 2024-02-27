@@ -1,0 +1,327 @@
+/*"vw" (viewport width) especifica el tamaño en porcentaje del ancho de la ventana del navegador. 
+Por ejemplo, 1vw es igual al 1% del ancho de la ventana del navegador.
+
+"vh" (viewport height) especifica el tamaño en porcentaje de la altura de la ventana del navegador.
+ Por ejemplo, 1vh es igual al 1% de la altura de la ventana del navegador.*/
+
+ *{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  /* outline: 1px solid black;*/
+}
+
+
+
+.main-header{
+    background-color:#EAC926;
+    padding: 10px;
+   /* position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 2500px;*/
+}
+
+.barra-de-busqueda{
+    background-color: #ffffff;
+    /*border: 1px solid #ccc;*/
+    height: 40px;
+    width: 20%;
+  /* margin: auto;  Esto centrará horizontalmente la barra de búsqueda */
+   
+}
+.sub-header{
+    text-align: center;
+
+}
+.main-navbar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.burger-menu{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+}
+.anuncio{
+    width:60% ;
+    height:15%;
+    
+}
+.logo {
+    width:100% ;
+    height:100%;
+}
+
+
+
+
+
+body {
+    background-color: #ebebeb;;
+    font-family:"comic sans MS" ;
+}
+.articulos-en-venta {
+   
+    width: 90%; 
+    margin: 0 auto; 
+}
+.articulo {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.precios{
+    position: relative;
+}
+
+.articulos-en-venta img{
+    width:100%;
+    height:auto;
+}
+.precios p{
+    margin: 0px;
+}
+.precios i{
+    color: green;
+   
+     position: absolute; /* Permite posicionar el icono de forma absoluta dentro del contenedor padre */
+    top: 5px; /* Mueve el icono hacia abajo */
+    right: 5px; /* Mueve el icono hacia la derecha */
+}
+.descuento{
+    color: green;
+    margin: 0px;
+}
+
+
+/*animaciones*/
+
+/*.info-del-articulo {
+    height: 0; 
+    overflow: hidden;  Oculta el contenido que excede el área definida 
+    transition: height 0.5s; 
+}
+.articulo:hover .info-del-articulo {
+    height: auto;  Muestra la descripción y la zona que ocupa cuando se pasa el mouse sobre el artículo 
+}*/
+.info-del-articulo {
+    opacity: 0; /* Inicialmente oculta la descripción */
+    transition: opacity 0.5s; /* Suaviza el cambio de opacidad */
+}
+
+.articulo:hover .info-del-articulo {
+    opacity: 1; /* Muestra la descripción cuando se pasa el mouse sobre el artículo */
+}
+
+.precios i {
+    transition: transform 0.5s; 
+}
+
+.articulo:hover .precios i {
+    transform: rotate(-90deg);
+}
+
+.articulo:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media (min-width: 1024px) {
+.sin-descuento{
+display: flex;
+}
+
+.con-descuento{
+display: flex;
+}
+.main-header-top{
+    display: flex;
+    justify-content: space-between;/*distribuye el espacio entre los objetos de forma homogenea*/
+}
+.main-navbar {
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;  
+}
+.main-navbar ul{
+    display: flex;
+    font-size: 20px;
+}
+.main-navbar li{
+    margin: 4px;
+}
+.burger-menu{
+    display: none;
+        
+}
+
+}
+
+
+
+
+
+
+    
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .main-header-top{
+        display: flex;
+        justify-content: space-between;/*distribuye el espacio entre los objetos de forma homogenea*/
+    }
+    .main-navbar {
+        display: flex;
+        border:dotted 2px red;
+        justify-content: space-between;  
+    }
+    .main-navbar ul{
+        display: flex;
+        font-size: 20px;
+    }
+    .main-navbar li{
+        margin: 4px;
+    }
+    .burger-menu{
+        display: none;
+            
+    }
+
+
+
+    .articulos-en-venta{
+        display: flex;
+
+    }
+    .todos-los-articulos{
+        display: flex;
+    }
+}
+ 
+
+
+    .anuncio{
+        display: block; /* Asegura que la imagen sea tratada como un bloque */
+        margin-left: auto;
+        margin-right: auto;  
+    }     
+
+
+
+
+
+
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Centrar verticalmente los elementos */
+        position: relative;
+        bottom: 0;
+    }
+    
+    .footer-desc {
+        margin: 20px; /* Añadir espacio entre los elementos */
+        text-align: center; /* Centrar el texto horizontalmente */
+    }
+    .footer-desc i{
+        color: blue;
+    }
+    .footer-desc i:hover{
+        color: green;
+    }
+
+/* Estilos específicos para dispositivos entre 361px y 768px de ancho */
+@media (min-width: 361px) and (max-width: 769px) {
+    .main-header-top {
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub-header {
+        text-align: center;
+    }
+    .main-navbar ul {
+        display: none;
+    }
+      .footer-container {
+        flex-direction: column; /* Cambia la dirección de flexión a columna */
+        align-items: center; /* Centra los elementos en el eje horizontal */
+    }
+}
+
+
+/* crear cuenta <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.main-crear-cuenta {
+    
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom:200px ;
+}
+.color-de-fondo{
+    background-color: rgb(133, 130, 130);
+    
+}
+.control-de-formulario{
+    
+}
+.control-de-formulario-fecha-de-nacimiento{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.control-de-formulario-perfil-de-usuario{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.control-de-formulario-categorias-de-interes{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.control-de-formulario-descripcion{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.control-de-formulario-fecha-de-nacimiento{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*login <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.login-main{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom:300px ;
+}
+.login-section{
+    background-color: rgb(149, 145, 145);
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-section div{
+    margin: 20px;
+}
+
+
+.boton-del-login:hover{
+    background-color: #0022AA;
+}
+
