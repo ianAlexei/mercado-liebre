@@ -267,9 +267,9 @@ display: flex;
     background-color: rgb(133, 130, 130);
     
 }
-.control-de-formulario{
+/*.control-de-formulario{
     
-}
+}*/
 .control-de-formulario-fecha-de-nacimiento{
     display:  flex;
     flex-direction: column;
